@@ -14,7 +14,14 @@ Hive 3.1.3 comes with Tez framework version 0.9, which depends on a Guava librar
 
 Error maybe like:
 ```
-Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: org.apache.hadoop.fs.s3a.AWSClientIOException: doesBucketExist on test: com.amazonaws.AmazonClientException: No AWS Credentials provided by BasicAWSCredentialsProvider EnvironmentVariableCredentialsProvider InstanceProfileCredentialsProvider : com.amazonaws.AmazonServiceException: writing response to 169.254.169.254:80: reading HTTP GET: unexpected EOF (Service: null; Status Code: 500; Error Code: null; Request ID: null): No AWS Credentials provided by BasicAWSCredentialsProvider EnvironmentVariableCredentialsProvider InstanceProfileCredentialsProvider : com.amazonaws.AmazonServiceException: writing response to 169.254.169.254:80: reading HTTP GET: unexpected EOF (Service: null; Status Code: 500; Error Code: null; Request ID: null)
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: org.apache.hadoop.fs.s3a.AWSClientIOException:
+doesBucketExist on test: com.amazonaws.AmazonClientException:
+No AWS Credentials provided by BasicAWSCredentialsProvider EnvironmentVariableCredentialsProvider InstanceProfileCredentialsProvider :
+com.amazonaws.AmazonServiceException: writing response to 169.254.169.254:80:
+reading HTTP GET: unexpected EOF (Service: null; Status Code: 500; Error Code: null; Request ID: null):
+No AWS Credentials provided by BasicAWSCredentialsProvider EnvironmentVariableCredentialsProvider InstanceProfileCredentialsProvider :
+com.amazonaws.AmazonServiceException: writing response to 169.254.169.254:80:
+reading HTTP GET: unexpected EOF (Service: null; Status Code: 500; Error Code: null; Request ID: null)
 ```
 
 Through the way to add config 
