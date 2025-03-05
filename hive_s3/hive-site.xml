@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property>
+        <name>hive.server2.enable.doAs</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>hive.tez.exec.inplace.progress</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>hive.conf.hidden.list</name>
+        <value>javax.jdo.option.ConnectionPassword,hive.server2.keystore.password,fs.s3a.proxy.password,dfs.adls.oauth2.credential,fs.adl.oauth2.credential</value>
+    </property>
+    <property>
+        <name>hive.exec.scratchdir</name>
+        <value>/opt/hive/scratch_dir</value>
+    </property>
+    <property>
+        <name>hive.user.install.directory</name>
+        <value>/opt/hive/install_dir</value>
+    </property>
+    <property>
+        <name>tez.runtime.optimize.local.fetch</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hive.exec.submit.local.task.via.child</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>local</value>
+    </property>
+    <property>
+        <name>tez.local.mode</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hive.execution.engine</name>
+        <value>tez</value>
+    </property>
+    <!-- <property>
+        <name>metastore.warehouse.dir</name>
+        <value>/opt/hive/data/warehouse</value>
+    </property> -->
+    <property>
+        <name>metastore.metastore.event.db.notification.api.auth</name>
+        <value>false</value>
+    </property>
+    <!-- s3 -->
+    <property>
+        <name>fs.s3a.impl</name>
+        <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+    </property>
+
+    <property>
+        <name>fs.s3a.endpoint</name>
+        <value>http://minio:9000</value>
+    </property>
+  
+    <property>
+        <name>fs.s3a.aws.credentials.provider</name>
+        <value>org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider</value>
+    </property>
+    <property>
+        <name>fs.s3a.metadatastore.impl</name>
+        <value>org.apache.hadoop.fs.s3a.s3guard.NullMetadataStore</value>
+    </property>
+    <property>
+        <name>fs.s3a.attempts.maximum</name>
+        <value>3</value>
+    </property>
+    <property>
+        <name>fs.s3a.path.style.access</name>
+        <value>true</value>
+    </property>
+    <!-- <property>
+        <name>fs.defaultFS</name>
+        <value>s3a://bucket/</value>
+    </property> -->
+    <property>
+        <name>fs.s3a.access.key</name>
+        <value>accesskey</value>
+    </property>
+   
+    <property>
+        <name>fs.s3a.secret.key</name>
+        <value>secretkey</value>
+    </property>
+    
+    <!-- Hive Warehouse Directory -->
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>s3a://bucket/hive-test/warehouse</value>
+    </property>
+    <!-- postgres -->
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:postgresql://postgres:5432/metastore_db</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>org.postgresql.Driver</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>hive</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>password</value>
+    </property>
+</configuration>
